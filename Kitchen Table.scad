@@ -1,5 +1,5 @@
-boards_in_top = 6;
-table_top_thickness = 2;
+boards_in_top = 8;
+table_top_thickness = 5/4;
 
 leg_offset = 3/8;
 leg_length = 29;
@@ -69,10 +69,10 @@ module apron() {
     leg_bracket_length = sqrt( pow( leg_bracket_a, 2 ) * 2 );
 
     // The corner brackets for attaching the legs.
-    translate( [ apron_overhang + apron_thickness, table_width - apron_overhang - leg_bracket_a - apron_thickness, 0 ] ) rotate( [ -90, 0, 45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ] );
-    translate( [ apron_overhang, apron_overhang + leg_bracket_a, 0 ] ) rotate( [ -90, 0, -45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ] );
-    translate( [ table_length - leg_bracket_a - apron_overhang, apron_overhang, 0 ] ) rotate( [ -90, 0, 45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ] );
-    translate( [ table_length - leg_bracket_a - apron_overhang - apron_thickness, table_width - apron_overhang - apron_thickness, 0 ] ) rotate( [ -90, 0, -45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ] );
+    translate( [ apron_overhang + apron_thickness, table_width - apron_overhang - leg_bracket_a - apron_thickness, 0 ] ) rotate( [ -90, 0, 45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ], label = "leg bracket" );
+    translate( [ apron_overhang, apron_overhang + leg_bracket_a, 0 ] ) rotate( [ -90, 0, -45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ], label = "leg bracket" );
+    translate( [ table_length - leg_bracket_a - apron_overhang, apron_overhang, 0 ] ) rotate( [ -90, 0, 45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ], label = "leg bracket" );
+    translate( [ table_length - leg_bracket_a - apron_overhang - apron_thickness, table_width - apron_overhang - apron_thickness, 0 ] ) rotate( [ -90, 0, -45 ] ) board( size = [ leg_bracket_length, apron_width, apron_thickness ], label = "leg bracket" );
 
 }
 
